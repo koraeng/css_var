@@ -1,0 +1,61 @@
+:root {
+    /* color  관련 변수 선언 */
+    --color-black:#111;
+    --color-blue:#0de3ff;
+    --color-pink:#ffa9e2;
+    --color-yellow:#ffe926;
+    --color-green:#3ff338;
+
+    /* size 관련 변수 선언 */
+    --base-space:10px;
+
+    /* animation 관련 변수 선언 */
+    --ani-dur:0.8s;
+}
+
+/*  :root  - 웹 문서에서 가장 상위요소를 선택할 때 (==html과 유사) 모든 요소에서 변수를 사용할 수 있다. */
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    margin:0 auto;
+    background-color:var(--color-black);
+}
+
+
+button {
+    font-size:15px;
+    padding:calc(var(--base-space) * 3); /* 사이에 스페이스 있어야 사칙연산 가능!!! */
+    margin-right:calc(var(--base-space));
+    border-radius:calc(var(--base-space) * 0.5);
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    transition:transform var(--ani-dur);
+}
+
+
+button:nth-child(1) {
+    background:var(--color-blue)
+}
+
+
+button:nth-child(2) {
+    background:var(--color-pink)
+}
+
+button:nth-child(3) {
+    background:var(--color-green)
+}
+
+button:nth-child(4) {
+    background:var(--color-yellow)
+}
+
+
+button:hover {
+    transform:scale(1.1);
+    transition:0.3;
+}
